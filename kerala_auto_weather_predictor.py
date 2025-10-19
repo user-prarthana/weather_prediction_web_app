@@ -16,7 +16,7 @@ st.set_page_config(
 st.markdown("""
 <style>
 [data-testid="stAppViewContainer"] {
-    background-image: url("https://opendigest.in/wp-content/uploads/2025/01/Weather-App-.jpg");
+    background-image: url("https://t3.ftcdn.net/jpg/15/81/44/20/360_F_1581442041_aSunfhU7HuHkdrkRnl2blIDDAA1lSoAa.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -174,5 +174,6 @@ if st.button("🔮 Predict Weather"):
     st.write("🌡️ **Generated Features:**")
     st.json(weather_data)
     st.markdown(f"<h2 style='color:#004D40;'>🌈 Predicted Weather: <b>{predicted_label}</b></h2>", unsafe_allow_html=True)
+
 
 
