@@ -33,9 +33,10 @@ st.markdown("""
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
-h1, h2, h3 {
-    color: #064663;
-    text-shadow: 1px 1px 2px #ffffff;
+/* ---- TEXT COLOR CHANGED TO BLACK ---- */
+h1, h2, h3, p, label, span, div {
+    color: #000000 !important;
+    text-shadow: none;
 }
 
 .stButton button {
@@ -52,6 +53,7 @@ h1, h2, h3 {
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 # -------------------- TITLE --------------------
 st.markdown("<h1>🌴 Kerala Smart Weather Predictor</h1>", unsafe_allow_html=True)
@@ -172,4 +174,5 @@ if st.button("🔮 Predict Weather"):
     st.write("🌡️ **Generated Features:**")
     st.json(weather_data)
     st.markdown(f"<h2 style='color:#004D40;'>🌈 Predicted Weather: <b>{predicted_label}</b></h2>", unsafe_allow_html=True)
+
 
