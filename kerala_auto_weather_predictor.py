@@ -15,72 +15,40 @@ st.set_page_config(
 # -------------------- CUSTOM CSS (Glassmorphism + Kerala Theme) --------------------
 st.markdown("""
 <style>
-/* Background Gradient */
 [data-testid="stAppViewContainer"] {
-    background: linear-gradient(135deg, #00796B, #48C9B0, #A8E6CF);
-    background-size: 400% 400%;
-    animation: gradientMove 20s ease infinite;
-}
-@keyframes gradientMove {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+    background-image: url("https://opendigest.in/wp-content/uploads/2025/01/Weather-App-.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-/* Transparent card look */
+[data-testid="stHeader"] {
+    background: rgba(0, 0, 0, 0);
+}
+
 .block-container {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
     padding: 2rem;
-    box-shadow: 0 0 25px rgba(0,0,0,0.2);
-    margin-top: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
-/* Title styling */
-h1 {
-    text-align: center;
-    color: #ffffff;
-    font-size: 2.8rem;
-    text-shadow: 2px 2px 6px #00332B;
-    margin-bottom: 0.3rem;
-}
-h3, h2 {
-    color: #ffffff;
-    text-shadow: 1px 1px 3px #00332B;
+h1, h2, h3 {
+    color: #064663;
+    text-shadow: 1px 1px 2px #ffffff;
 }
 
-/* Text + form styling */
-label, .stSelectbox label, .stDateInput label {
-    color: #F1F1F1 !important;
-    font-weight: 600;
-}
-.stSelectbox div, .stDateInput input {
-    border-radius: 10px !important;
-}
-
-/* Button styling */
-.stButton>button {
-    background: linear-gradient(90deg, #004D40, #009688);
+.stButton button {
+    background-color: #0E7490;
     color: white;
     border-radius: 12px;
-    padding: 0.6rem 1.2rem;
     font-weight: bold;
-    transition: 0.3s ease-in-out;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 0.6rem 1.2rem;
+    transition: 0.3s;
 }
-.stButton>button:hover {
-    transform: scale(1.05);
-    background: linear-gradient(90deg, #00695C, #00ACC1);
-}
-
-/* Info box */
-div[data-testid="stSuccess"], div[data-testid="stInfo"] {
-    background: rgba(255,255,255,0.2);
-    border-radius: 10px;
-    color: #00332B;
-    backdrop-filter: blur(5px);
+.stButton button:hover {
+    background-color: #0C4A6E;
+    transform: scale(1.03);
 }
 </style>
 """, unsafe_allow_html=True)
@@ -204,3 +172,4 @@ if st.button("🔮 Predict Weather"):
     st.write("🌡️ **Generated Features:**")
     st.json(weather_data)
     st.markdown(f"<h2 style='color:#004D40;'>🌈 Predicted Weather: <b>{predicted_label}</b></h2>", unsafe_allow_html=True)
+
